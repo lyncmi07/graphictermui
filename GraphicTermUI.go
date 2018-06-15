@@ -15,11 +15,11 @@ type TermUI struct {
 
 var mainThreadFunction mainThread
 
-func NewTerminalUI(fn mainThread, screenWidth, screenHeight int) {
+func NewTerminalUI(fn mainThread, screenWidth, screenHeight int, fullscreen bool) {
 	//tui := new(TermUI);
 	//tui.View = cc.NewFullscreenCanvas();
 	mainThreadFunction = fn
-	cc.CurseGraphicStart(newTermUIContinued, screenWidth, screenHeight)
+	cc.CurseGraphicStart(newTermUIContinued, screenWidth, screenHeight, fullscreen)
 
 	//cc.Raw(true);
 
